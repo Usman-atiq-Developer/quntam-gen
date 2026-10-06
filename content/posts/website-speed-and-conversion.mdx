@@ -1,0 +1,49 @@
+---
+title: "Why Website Speed Is a Revenue Metric, Not a Tech Metric"
+excerpt: "Every second of load time has a measurable cost. Here's how to think about site speed as part of your funnel, not a line item for developers."
+category: "Web Development"
+coverImage: "/images/blog/website-speed.webp"
+author: "Quntam Gen Team"
+authorRole: "Web Development"
+date: "2026-04-15"
+takeaways:
+  - "Bounce rate climbs sharply once load time passes two to three seconds."
+  - "Unoptimized images are the most common cause of slow-loading pages."
+  - "Third-party scripts should be deferred or lazy-loaded, not left render-blocking."
+  - "Treat page speed as a funnel metric with a target and an owner — not a one-time audit."
+faqs:
+  - q: "What's a good target for page load time?"
+    a: "Aim for a Largest Contentful Paint under 2.5 seconds — that's the threshold Google considers 'good' for Core Web Vitals, and it lines up closely with where bounce rate starts climbing."
+  - q: "Does site speed actually affect SEO rankings?"
+    a: "Yes. Core Web Vitals are a confirmed Google ranking factor, and slow sites also tend to get crawled less efficiently, which can affect how much of your content gets indexed."
+  - q: "What's the fastest way to improve an existing slow site?"
+    a: "Start with images — compressing and serving modern formats like WebP or AVIF usually delivers the biggest, fastest win before touching anything else."
+  - q: "How can I check my website's actual loading speed?"
+    a: "Google PageSpeed Insights and Google Search Console's Core Web Vitals report are the two most reliable free tools — they show real-world data from actual visitors, not just a lab simulation."
+  - q: "Does a slow website really affect sales and conversions?"
+    a: "Yes — multiple large-scale studies show conversion rate drops measurably for every additional second of load time past roughly two to three seconds, making speed a direct revenue factor, not just a technical detail."
+---
+
+Marketing teams obsess over ad creative and copy, then send that traffic to a site that takes six seconds to load. That gap is where a huge amount of ad spend quietly disappears.
+
+## The data is consistent
+
+Studies across industries keep landing on the same pattern: as load time increases past two to three seconds, bounce rate climbs sharply and conversion rate drops. This isn't a UX nicety — it's a direct leak in the funnel.
+
+## What actually slows a site down
+
+### Unoptimized images
+
+Large, uncompressed images are the single most common cause of slow load times. Serving modern formats like WebP or AVIF at the right size fixes most of it immediately.
+
+### Render-blocking scripts
+
+Third-party scripts — chat widgets, trackers, ad pixels — often load before the page content does. Deferring or lazy-loading them keeps the page usable while they load in the background.
+
+### No caching strategy
+
+Without proper caching and a CDN, every visitor re-downloads the same assets from scratch. A CDN alone can cut load times dramatically for visitors far from your server.
+
+## How to think about the fix
+
+Treat speed as a funnel metric with an owner, not a one-time audit. Set a target — under 2.5 seconds for Largest Contentful Paint is a good baseline — and check it every time you ship a new page or campaign landing page.

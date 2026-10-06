@@ -1,0 +1,67 @@
+{
+  "name": "quntam-gen",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed:admin": "tsx scripts/create-admin.ts",
+    "seed:content": "tsx scripts/seed-content.ts",
+    "migrate:posts": "tsx scripts/migrate-posts.ts"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.11.0",
+    "clsx": "^2.1.1",
+    "dompurify": "^3.2.7",
+    "framer-motion": "^11.3.19",
+    "gray-matter": "^4.0.3",
+    "jose": "^5.9.6",
+    "lucide-react": "^0.469.0",
+    "marked": "^18.0.13",
+    "mongoose": "^8.7.0",
+    "next": "^15.5.27",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.52.1",
+    "reading-time": "^1.5.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/dompurify": "^3.0.5",
+    "@types/node": "^20.14.11",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.19",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.5.27",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.6",
+    "tsx": "^4.19.1",
+    "typescript": "^5.5.4"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "$postcss"
+    }
+  }
+}

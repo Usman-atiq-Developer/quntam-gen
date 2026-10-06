@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #f7f7f8;
+  color: #4b4b52;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), sans-serif;
+  color: #0a0a0c;
+}
+
+::selection {
+  background: #c81e2c;
+  color: #ffffff;
+}
+
+/* Focus states — accessibility, always visible on keyboard nav.
+   No forced border-radius so the ring follows each element's real shape
+   (pills stay round, cards stay square) instead of clipping into a box. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #c81e2c;
+  outline-offset: 2px;
+}
+
+/* Signature gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #c81e2c 0%, #ff4b3e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Signature CTA button */
+.btn-gradient {
+  background: linear-gradient(90deg, #c81e2c 0%, #ff4b3e 50%, #c81e2c 100%);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  transition: background-position 550ms var(--ease-out-expo), transform 250ms var(--ease-out-expo), box-shadow 250ms var(--ease-out-expo);
+}
+.btn-gradient:hover {
+  background-position: 100% 0%;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(200, 30, 44, 0.28);
+}
+.btn-gradient:active {
+  transform: translateY(0px);
+}
+
+/* Light-theme content card */
+.card-surface {
+  background: #ffffff;
+  border: 1px solid #e3e3e7;
+  box-shadow: 0 1px 2px rgba(10, 10, 12, 0.03), 0 10px 30px rgba(10, 10, 12, 0.04);
+  transition: border-color 300ms var(--ease-out-expo), transform 300ms var(--ease-out-expo), box-shadow 300ms var(--ease-out-expo);
+}
+.card-surface:hover {
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1.5px #ff4b3e, 0 24px 48px rgba(200, 30, 44, 0.14);
+}
+
+/* Dark-band card (used inside dark hero/testimonial sections) */
+.card-surface-dark {
+  background: #19191c;
+  border: 1px solid #2c2c31;
+  transition: border-color 300ms var(--ease-out-expo), transform 300ms var(--ease-out-expo), box-shadow 300ms var(--ease-out-expo);
+}
+.card-surface-dark:hover {
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1.5px #ff4b3e, 0 20px 40px rgba(255, 75, 62, 0.18);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c81e2c;
+  font-weight: 700;
+}
+
+/* Custom scrollbar, matches brand */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f3;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c81e2c, #ff4b3e);
+  border-radius: 8px;
+}
+
+/* Respect reduced motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Prose styling for legal pages & MDX blog content — dark text on light background */
+.prose-brand {
+  --tw-prose-body: #4b4b52;
+  --tw-prose-headings: #0a0a0c;
+  --tw-prose-links: #c81e2c;
+  --tw-prose-bold: #0a0a0c;
+  --tw-prose-bullets: #c81e2c;
+  --tw-prose-quotes: #0a0a0c;
+  --tw-prose-quote-borders: #c81e2c;
+  --tw-prose-code: #0a0a0c;
+  --tw-prose-hr: #e3e3e7;
+}
+
+/* First paragraph of every article reads as a larger, darker lead-in */
+.article-content > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #0a0a0c;
+  font-weight: 500;
+}
+
+/* A nested list sits *inside* a parent <li>, between two sibling items —
+   the same 1.5rem top/bottom margin used for a top-level list reads as too
+   loose there. Tightening just the nested case keeps top-level list
+   spacing untouched while making nested lists feel properly grouped
+   under their parent item instead of visually floating apart from it. */
+.article-content li > ul,
+.article-content li > ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}

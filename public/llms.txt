@@ -1,0 +1,12 @@
+# Quntam Gen
+
+> Quntam Gen is a digital growth agency offering web development, SEO, digital marketing, Meta ads management, social media handling, app development, AI automation, UI/UX design, and custom software development as one coordinated service.
+
+## Key pages
+- [Services](https://quntamgen.com/services): All services with packages, process, and FAQs
+- [Portfolio](https://quntamgen.com/portfolio): Case studies with measurable client results
+- [Pricing](https://quntamgen.com/pricing): Starter, Growth, and Scale tiers (custom quotes)
+- [About](https://quntamgen.com/about): Who we are and how we work
+- [Blog](https://quntamgen.com/blog): Guides on SEO, web performance, and AI automation
+- [FAQ](https://quntamgen.com/faq): Pricing, process, timelines, contracts, support
+- [Contact](https://quntamgen.com/contact): Get a free quote — support@quntamgen.com
